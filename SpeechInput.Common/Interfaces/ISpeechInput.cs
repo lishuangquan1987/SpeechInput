@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpeechInput.Common.Interfaces
 {
-    public interface ISpeechInput
+    public interface ISpeechInput: IDisposable
     {
         /// <summary>
         /// 音频转文字对象
@@ -17,16 +17,24 @@ namespace SpeechInput.Common.Interfaces
         /// 重置音频
         /// </summary>
         /// <returns></returns>
-        OperationResult ResetAudio();
+        Task<OperationResult> ResetAudio();
         /// <summary>
         /// 开始录音
         /// </summary>
         /// <returns></returns>
-        OperationResult StartRecord();
+        Task<OperationResult> StartRecord();
         /// <summary>
         /// 结束录音
         /// </summary>
         /// <returns></returns>
-        OperationResult<string> EndRecordAndGetText();
+        Task<OperationResult<string>> EndRecordAndGetText();
+        /// <summary>
+        /// 可用改变事件
+        /// </summary>
+        event Action<bool> AvaliableChanged;
+        /// <summary>
+        /// 是否可用
+        /// </summary>
+        bool IsAvaliable { get; }
     }
 }

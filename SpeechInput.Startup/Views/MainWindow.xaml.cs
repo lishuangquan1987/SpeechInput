@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using SpeechInput.Startup.ViewModels;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,7 @@ namespace SpeechInput.Startup
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext=new MainWindowViewModel();
         }
     }
 }

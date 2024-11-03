@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SpeechInput.Common\SpeechInput.Common.csproj" />
+    <ProjectReference Include="..\SpeechInput.Implement\SpeechInput.Implement.csproj" />
     <ProjectReference Include="..\SpeechInput.Stt.Baidu\SpeechInput.Stt.Baidu.csproj" />
     <ProjectReference Include="..\SpeechInput.Stt.Microsoft\SpeechInput.Stt.Microsoft.csproj" />
   </ItemGroup>

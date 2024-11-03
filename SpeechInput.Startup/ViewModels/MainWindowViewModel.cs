@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using SpeechInput.Common.Helpers;
 using System.Drawing;
+using SpeechInput.Common.Interfaces;
 
 namespace SpeechInput.Startup.ViewModels
 {
@@ -21,6 +22,7 @@ namespace SpeechInput.Startup.ViewModels
         private DateTime _lastPressedTime;
         private bool _isPressed = false;
         private Point _lastPoint;
+        private ISpeechInput speechInput;
         public MainWindowViewModel()
         {
             StartOrStopRecordCmd = new RelayCommand(StartOrStopRecord, () => this.IsConnected);
@@ -87,19 +89,19 @@ namespace SpeechInput.Startup.ViewModels
             }
             if (IsRecording)
             {
-                await speechInput.Stop();
+                //await speechInput.Stop();
                 IsRecording = false;
             }
             else
             {
-                await speechInput.Start();
+                //await speechInput.Start();
                 IsRecording = true;
             }
         }
 
         ~MainWindowViewModel()
         {
-            speechInput.Unload();
+            //speechInput.Unload();
         }
         /// <summary>
         /// 是否正在录音
@@ -109,7 +111,7 @@ namespace SpeechInput.Startup.ViewModels
         /// 是否连接上了服务端
         /// </summary>
         [NotifyCanExecuteChangedFor(nameof(StartOrStopRecordCmd))]
-        [ObservableProperty] private bool _isConnected;
+        [ObservableProperty] private bool _isConnected = false;
 
         public RelayCommand StartOrStopRecordCmd { get; }
         public RelayCommand<MouseButtonEventArgs> MouseLeftButtonDownCmd { get; }

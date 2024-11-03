@@ -5,3 +5,7 @@ SpeechInput.Startup/obj/
 SpeechInput.Startup/bin/
 SpeechInput.Stt.Baidu/obj/
 SpeechInput.Stt.Microsoft/obj/
+SpeechInput.Common/bin/
+SpeechInput.Implement/bin/
+SpeechInput.Stt.Baidu/bin/
+SpeechInput.Stt.Microsoft/bin/

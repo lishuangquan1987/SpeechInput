@@ -13,7 +13,7 @@ namespace SpeechInput.Startup.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if((value is bool b) && b ) return Visibility.Visible;
+            if ((value is bool b) && b) return Visibility.Visible;
 
             return Visibility.Collapsed;
         }

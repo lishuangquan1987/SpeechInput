@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Baidu.AI" Version="4.15.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpeechInput.Common\SpeechInput.Common.csproj" />
+  </ItemGroup>
+
 </Project>
