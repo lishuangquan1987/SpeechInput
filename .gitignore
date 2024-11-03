@@ -1,0 +1,7 @@
+.vs/
+SpeechInput.Common/obj/
+SpeechInput.Implement/obj/
+SpeechInput.Startup/obj/
+SpeechInput.Startup/bin/
+SpeechInput.Stt.Baidu/obj/
+SpeechInput.Stt.Microsoft/obj/
